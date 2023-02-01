@@ -3,7 +3,7 @@
 <!-- https://github.com/abhisheknaiidu/awesome-github-profile-readme#github-actions- -->
 
 <!-- https://github.com/kyechan99/capsule-render -->
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=250&section=header&text=Jo%20Rocca:%20blockchain%20developer&fontSize=40)
+![header](https://capsule-render.vercel.app/api?type=shark&color=auto&height=250&section=header&text=Jo%20Rocca:%20blockchain%20developer&fontSize=40)
 
 <!-- https://github.com/satyawikananda/cardivo -->
 <!-- ![Jo's card](https://cardivo.vercel.app/api?name=Jo%20Rocca&description=Hi,%20I%27m%20a%20blockchain%20web%20developer.%20Nice%20to%20meet%20you%20%F0%9F%91%8B&image=https://github.com/jrocca82.png&backgroundColor=%23ecf0f1&pattern=bubbles&colorPattern=%23eaeaea) -->
