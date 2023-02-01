@@ -1,5 +1,7 @@
 ![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
 
+[![GitHub Streak](https://streak-stats.demolab.com/?user=jrocca82)](https://git.io/streak-stats)
+
 <!--
 **jrocca82/jrocca82** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
