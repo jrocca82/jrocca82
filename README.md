@@ -11,8 +11,8 @@
 
 ## Stats:
 <p alignItems="center">
-![](https://github.com/jrocca82/git-profile/blob/master/generated/overview.svg)
-![](https://github.com/jrocca82/git-profile/blob/master/generated/languages.svg)
+<img src="https://github.com/jrocca82/git-profile/blob/master/generated/overview.svg" />
+<img src="https://github.com/jrocca82/git-profile/blob/master/generated/languages.svg" />
 </p>
 
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=timeGradient)
