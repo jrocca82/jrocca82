@@ -1,0 +1,21 @@
+- name: Solidity
+  logo: Solidity
+  url: https://docs.soliditylang.org/en/v0.8.18/
+  color: '##964B00'
+  projects:
+    - url: https://github.com/jrocca82/solidity-libraries
+    - url: https://github.com/jrocca82/solidity-template-2.0
+    - url: https://github.com/jrocca82/buy-coffee-app
+    - url: https://github.com/jrocca82/solana-pay-starter
+    - url: https://github.com/jrocca82/solana-gif-app
+
+- name: Typescript
+  logo: Typescript
+  url: https://www.typescriptlang.org/
+  color: '#007acc'
+  projects:
+    - url: https://github.com/jrocca82/jelly-frontend
+    - url: https://github.com/jrocca82/kh-nft-game
+    - url: https://github.com/jrocca82/kh-nft-game
+    - url: https://github.com/jrocca82/ShoppingApp
+    - url: https://github.com/jrocca82/rick-and-morty
