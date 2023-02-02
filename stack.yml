@@ -1,7 +1,7 @@
 - name: Solidity
   logo: Solidity
   url: https://docs.soliditylang.org/en/v0.8.18/
-  color: '##964B00'
+  color: '#964B00'
   projects:
     - url: https://github.com/jrocca82/solidity-libraries
     - url: https://github.com/jrocca82/solidity-template-2.0
