@@ -10,8 +10,8 @@
 ![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
 
 ## Stats:
-<!-- https://github.com/anuraghazra/github-readme-stats -->
-[![Jo's GitHub stats](https://github-readme-stats.vercel.app/api?username=jrocca82)](https://github.com/jrocca82/github-readme-stats)
+![](https://raw.githubusercontent.com/jrocca82/git-profile/master/generated/overview.svg#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/jrocca82/git-profile/master/generated/languages.svg#gh-dark-mode-only)
 
 ## Trophies:
 <!-- https://github.com/ryo-ma/github-profile-trophy -->
