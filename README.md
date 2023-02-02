@@ -4,15 +4,15 @@
 
 <!-- https://github.com/kyechan99/capsule-render -->
 ![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Jo%20Rocca:%20blockchain%20developer&fontSize=40)
+## Stats:
+<p alignItems="center" justifyContent="space-between">
+<img src="https://github.com/jrocca82/git-profile/blob/master/generated/overview.svg" />
+<img src="https://github.com/jrocca82/git-profile/blob/master/generated/languages.svg" />
+</p>
 
 ## Contributions:
 
 ![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
 
-## Stats:
-<p alignItems="center">
-<img src="https://github.com/jrocca82/git-profile/blob/master/generated/overview.svg" />
-<img src="https://github.com/jrocca82/git-profile/blob/master/generated/languages.svg" />
-</p>
 
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=timeGradient)
