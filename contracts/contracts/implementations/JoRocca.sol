@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
@@ -25,6 +25,7 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
 
     // Employment
     Employment[] public employmentHistory;
+    // Maps start year to employment record
     mapping(uint64 => Employment) public occupationByYear;
 
     // Educational History
@@ -33,8 +34,6 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
 
     // Skills
     Skill[] public skills;
-    mapping(string => uint64) public skillEndorsements;
-    mapping(string => address[]) public skillReferences;
     mapping(string => Skill) public skillDetails;
 
     function initialize(ContactInfo memory _contactInfo) external initializer {
@@ -42,17 +41,17 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
         contactDetails = _contactInfo;
     }
 
+    function getEmploymentHistory() public view returns (Employment[] memory) {
+        return employmentHistory;
+    }
+
     function addEmployment(
         Employment memory _newEmploymentRecord
     ) public override onlyOwner {
         employmentHistory.push(_newEmploymentRecord);
-        for (
-            uint64 i = _newEmploymentRecord._startYear;
-            i < _newEmploymentRecord._endYear;
-            i++
-        ) {
-            occupationByYear[i] = _newEmploymentRecord;
-        }
+        occupationByYear[
+            _newEmploymentRecord._startYear
+        ] = _newEmploymentRecord;
     }
 
     function addEducation(
@@ -79,21 +78,50 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     }
 
     function removeSocialMedia(uint256 _index) public override onlyOwner {
-        SocialMedia memory lastItem = socialMedia[
-            socialMedia.length - 1
-        ];
+        SocialMedia memory lastItem = socialMedia[socialMedia.length - 1];
         socialMedia[_index] = lastItem;
         socialMedia.pop();
     }
 
-    function addSkill(Skill memory _newSkill) public override onlyOwner {
-        skills.push(_newSkill);
-        skillDetails[_newSkill._skillName] = _newSkill;
+    function addSkill(
+        string memory _skillName,
+        string memory _skillDescription
+    ) public override onlyOwner {
+        skills.push() = Skill({
+            _skillName: _skillName,
+            _skillDescription: _skillDescription,
+            _numberOfEndorsements: 0,
+            _references: new address[](0)
+        });
+        skillDetails[_skillName] = skills[skills.length - 1];
     }
 
     function endorseSkill(string memory _skillName) public override {
-        skillEndorsements[_skillName] += 1;
-        skillReferences[_skillName].push(address(msg.sender));
+        skillDetails[_skillName]._references.push(msg.sender);
+        skillDetails[_skillName]._numberOfEndorsements += 1;
+        for (uint256 i = 0; i < skills.length; i++) {
+            if (
+                keccak256(abi.encodePacked(skills[i]._skillName)) ==
+                keccak256(abi.encodePacked(_skillName))
+            ) {
+                skills[i]._numberOfEndorsements += 1;
+                skills[i]._references.push(msg.sender);
+            }
+        }
+    }
+
+    function getSkillReferences(
+        string memory _skillName
+    ) public view returns (address[] memory) {
+        return skillDetails[_skillName]._references;
+    }
+
+    function getSkillEndorsementCount(string memory _skillName) public view returns(uint256){
+        return skillDetails[_skillName]._numberOfEndorsements;
+    }
+
+    function getAllSkills() public view returns (Skill[] memory) {
+        return skills;
     }
 
     function getContactDetails()
@@ -105,7 +133,9 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
         return (contactDetails, socialMedia);
     }
 
-    function updateContactDetails(ContactInfo memory _newContactDetails) public onlyOwner {
+    function updateContactDetails(
+        ContactInfo memory _newContactDetails
+    ) public onlyOwner {
         contactDetails = _newContactDetails;
     }
 

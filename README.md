@@ -30,7 +30,7 @@ If you have any issues with the app, please open an issue in the relevant repo.
 <p>Link: https://buy-coffee-app.vercel.app/</p>
 <p>Repo: https://github.com/jrocca82/buy-coffee-app</p>
 
-### Join my DAO on Polygon
+### Join my DAO on Polygon:
 <p>Network: Mumbai</p>
 <p>Link: **COMING SOON**</p>
 <p>Repo: https://github.com/jrocca82/javascript-dao</p>
@@ -40,7 +40,7 @@ If you have any issues with the app, please open an issue in the relevant repo.
 <p>Link: https://jrocca82.github.io/jelly-web3/</p>
 <p>Repo: https://github.com/jrocca82/jelly-game-full</p>
 
-### View my experience through a Soulbound Token on OpenSea
+### View my resume through a Soulbound Token on OpenSea:
 <p>Network: Goerli</p>
 <p>Link: **COMING SOON**</p>
 <p>Repo: This one!</p>

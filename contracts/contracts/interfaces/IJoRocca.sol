@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity 0.8.17;
 
 import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
@@ -71,8 +71,9 @@ interface IJoRocca is IERC165 {
     function addEducation(Education memory _newEducationRecord) external;
 
     /// @dev Adds a new skill (only contract owner)
-    /// @param _newSkill the skill to add
-    function addSkill(Skill memory _newSkill) external;
+    /// @param _skillName the name of the skill
+    /// @param _skillDescription a description of the skill
+    function addSkill(string memory _skillName, string memory _skillDescription) external;
 
     /// @dev Endorse a skill
     /// @param _skillName the skill to endorse. This skill must already have been added by the addSkill function
