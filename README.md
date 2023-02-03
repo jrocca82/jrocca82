@@ -21,9 +21,9 @@ Link: https://solana-gif-app.vercel.app/
 Repo: https://github.com/jrocca82/solana-gif-app
 
 ### Buy me a coffee and say hi on Ethereum:
-Network: Goerli
-Link: https://buy-coffee-app.vercel.app/
-Repo: https://github.com/jrocca82/buy-coffee-app
+<p>Network: Goerli</p>
+<p>Link: https://buy-coffee-app.vercel.app/</p>
+<p>Repo: https://github.com/jrocca82/buy-coffee-app</p>
 
 ### Join my DAO on Polygon
 Network: Mumbai
