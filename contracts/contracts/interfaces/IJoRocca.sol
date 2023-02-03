@@ -80,7 +80,7 @@ interface IJoRocca is IERC165 {
     function endorseSkill(string memory _skillName) external;
 
     /// @dev Returns the token URI, which contains the token metadata
-    function tokenURI() external view returns (string memory);
+    function tokenURI(uint256 _tokenId) external view returns (string memory);
 
     /// @notice mints a new resume token
     /// @param _to the address to send the token to

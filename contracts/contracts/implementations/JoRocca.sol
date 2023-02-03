@@ -5,6 +5,7 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/CountersUpgradeable.sol";
 import "../interfaces/IJoRocca.sol";
+import "./libraries/TokenMetadata.sol";
 
 contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     using CountersUpgradeable for CountersUpgradeable.Counter;
@@ -17,6 +18,7 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     CountersUpgradeable.Counter private _tokenCounter;
     // Mapping owner address to token count
     mapping(address => uint256) private _balances;
+    string public imageUri;
 
     // General Information
     string public description;
@@ -36,9 +38,28 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     Skill[] public skills;
     mapping(string => Skill) public skillDetails;
 
-    function initialize(ContactInfo memory _contactInfo) external initializer {
+    function initialize(
+        ContactInfo memory _contactInfo,
+        string memory _tokenName,
+        string memory _tokenSymbol,
+        string memory _profileDescription,
+        string memory _imageURI
+    ) external initializer {
         __Ownable_init();
+        _name = _tokenName;
+        _symbol = _tokenSymbol;
+        description = _profileDescription;
         contactDetails = _contactInfo;
+        imageUri = _imageURI;
+        _tokenCounter.increment();
+    }
+
+    function resetImageUri(string memory _newImageUri) public onlyOwner{
+        imageUri = _newImageUri;
+    }
+
+    function updateDescription(string memory _newDescription) public onlyOwner {
+        description = _newDescription;
     }
 
     function getEmploymentHistory() public view returns (Employment[] memory) {
@@ -116,7 +137,9 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
         return skillDetails[_skillName]._references;
     }
 
-    function getSkillEndorsementCount(string memory _skillName) public view returns(uint256){
+    function getSkillEndorsementCount(
+        string memory _skillName
+    ) public view returns (uint256) {
         return skillDetails[_skillName]._numberOfEndorsements;
     }
 
@@ -140,7 +163,16 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     }
 
     // TOKEN FUNCTIONS
-    function tokenURI() external view returns (string memory) {}
+    function tokenURI(uint256 _tokenId) external view returns (string memory) {
+        return
+            TokenMetadata.buildTokenURI(
+                skills,
+                _name,
+                imageUri,
+                description,
+                _tokenId
+            );
+    }
 
     function mint(address to) external override onlyOwner {
         uint256 currentTokenId = _tokenCounter.current();

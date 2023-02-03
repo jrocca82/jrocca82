@@ -88,7 +88,30 @@ describe("Resume tests", () => {
     await contract.updateContactDetails(newContactDetails);
     const newDetails = await contract.getContactDetails();
     expect(newDetails[0]._email).to.eq(newContactDetails._email);
-})
+  });
+
+  it("Should mint a token", async () => {
+    await expect(contract.mint(alice.address)).to.changeTokenBalance(contract, alice.address, 1);
+  });
+
+  it("Should return a token URI", async () => {
+    await contract.mint(alice.address);
+    const tokenURI = await contract.tokenURI(1);
+    expect(tokenURI).to.eq("data:application/json;base64,eyJuYW1lIjogIkpvIFJvY2NhJ3MgUmVzdW1lICMxIiwiaW1hZ2UiOiAiaW1hZ2UuY29tIiwiZGVzY3JpcHRpb24iOiAiUHJvZmVzc2lvbmFsIGJsb2NrY2hhaW4gZGV2ZWxvcGVyIiwiYXR0cmlidXRlcyI6IFtdfQ==");
+  })
+
+  it("Should update token metadata", async () => {
+    await contract.mint(alice.address);
+    const tokenURI = await contract.tokenURI(1);
+    expect(tokenURI).to.eq("data:application/json;base64,eyJuYW1lIjogIkpvIFJvY2NhJ3MgUmVzdW1lICMxIiwiaW1hZ2UiOiAiaW1hZ2UuY29tIiwiZGVzY3JpcHRpb24iOiAiUHJvZmVzc2lvbmFsIGJsb2NrY2hhaW4gZGV2ZWxvcGVyIiwiYXR0cmlidXRlcyI6IFtdfQ==");
+    await contract.addSkill("Blockchain", "Smart contracts");
+    const updatedTokenURI = await contract.tokenURI(1);
+    expect(tokenURI).to.not.eq(updatedTokenURI);
+    await contract.endorseSkill("Blockchain");
+    const anotherTokenURI = await contract.tokenURI(1);
+    expect(anotherTokenURI).to.not.eq(tokenURI);
+    expect(anotherTokenURI).to.not.eq(updatedTokenURI);
+  });
 
   it("Should protect functions with onlyOwner modifier", async () => {
     await expect(contract.connect(alice).addEmployment(job)).to.be.revertedWith("Ownable: caller is not the owner");
@@ -96,5 +119,7 @@ describe("Resume tests", () => {
     await expect(contract.connect(alice).addSocialMedia("Github", "jrocca82")).to.be.revertedWith("Ownable: caller is not the owner");
     await contract.addSocialMedia("Github", "jrocca82");
     await expect(contract.connect(alice).removeSocialMedia(0)).to.be.revertedWith("Ownable: caller is not the owner");
+    await expect(contract.connect(alice).addSkill("Blockchain", "Smart contracts")).to.be.revertedWith("Ownable: caller is not the owner");
+    await expect(contract.connect(alice).updateContactDetails({ _phoneNumber: "", _email: "", _location: "" })).to.be.revertedWith("Ownable: caller is not the owner");
   });
 });

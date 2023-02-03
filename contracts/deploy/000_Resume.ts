@@ -6,7 +6,7 @@ import { JoRocca__factory } from "../typechain-types";
 const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     const { deployments } = hre;
 
-    const contractParams = {
+    const contactInfo = {
         _phoneNumber: "+61455167598",
         _email: "missrocca2016@gmail.com",
         _location: "Fortitude Valley, QLD"
@@ -18,7 +18,11 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     );
 
     const token = await upgrades.deployProxy(tokenFactory, [
-        contractParams,
+        contactInfo,
+        "Jo Rocca's Resume",
+        "JOROCCA",
+        "Professional blockchain developer",
+        "image.com",
     ]);
 
     // Save the deployment to hardhat so that the contract can be fetched via ethers.getContract, upgradeable contracts don't do this by default
