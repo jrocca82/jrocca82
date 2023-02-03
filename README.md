@@ -4,6 +4,11 @@
 
 <!-- https://github.com/kyechan99/capsule-render -->
 ![header](https://capsule-render.vercel.app/api?type=waving&color=0:6d98fa,100:f9f79a&height=250&section=header&text=Jo%20Rocca:%20blockchain%20developer&fontSize=40)
+
+## Github Contributions:
+
+![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
+
 ## Github Stats:
 <p alignItems="center" justifyContent="space-between">
 <img src="https://github.com/jrocca82/git-profile/blob/master/generated/overview.svg" />
@@ -39,10 +44,6 @@ If you have any issues with the app, please open an issue in the relevant repo.
 <p>Network: Goerli</p>
 <p>Link: **COMING SOON**</p>
 <p>Repo: This one!</p>
-
-## Github Contributions:
-
-![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
 
 
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=0:6d98fa,100:f9f79a)
