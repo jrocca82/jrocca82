@@ -1,0 +1,870 @@
+{
+  "address": "0xd3b3D2a66f122aa7ce9754113bd5830a96E11FEe",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "HasToken",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_universityName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_degreeAwarded",
+              "type": "string"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_startYear",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_endYear",
+              "type": "uint64"
+            }
+          ],
+          "internalType": "struct IJoRocca.Education",
+          "name": "_newEducationRecord",
+          "type": "tuple"
+        }
+      ],
+      "name": "addEducation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_employerName",
+              "type": "string"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_startYear",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_endYear",
+              "type": "uint64"
+            },
+            {
+              "internalType": "string",
+              "name": "_jobTitle",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_roleSummary",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IJoRocca.Employment",
+          "name": "_newEmploymentRecord",
+          "type": "tuple"
+        }
+      ],
+      "name": "addEmployment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_skillName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_skillDescription",
+          "type": "string"
+        }
+      ],
+      "name": "addSkill",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_platform",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_linkOrUsername",
+          "type": "string"
+        }
+      ],
+      "name": "addSocialMedia",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "contactDetails",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_phoneNumber",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_location",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "description",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "name": "educationByYear",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_universityName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_degreeAwarded",
+          "type": "string"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_startYear",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_endYear",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "educationHistory",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_universityName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_degreeAwarded",
+          "type": "string"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_startYear",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_endYear",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "employmentHistory",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_employerName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_startYear",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_endYear",
+          "type": "uint64"
+        },
+        {
+          "internalType": "string",
+          "name": "_jobTitle",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_roleSummary",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_skillName",
+          "type": "string"
+        }
+      ],
+      "name": "endorseSkill",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllSkills",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_skillName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_skillDescription",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_numberOfEndorsements",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "_references",
+              "type": "address[]"
+            }
+          ],
+          "internalType": "struct IJoRocca.Skill[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getContactDetails",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_phoneNumber",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_email",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_location",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IJoRocca.ContactInfo",
+          "name": "",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_platform",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_linkOrUsername",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IJoRocca.SocialMedia[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getEmploymentHistory",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_employerName",
+              "type": "string"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_startYear",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "_endYear",
+              "type": "uint64"
+            },
+            {
+              "internalType": "string",
+              "name": "_jobTitle",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_roleSummary",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IJoRocca.Employment[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_skillName",
+          "type": "string"
+        }
+      ],
+      "name": "getSkillEndorsementCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_skillName",
+          "type": "string"
+        }
+      ],
+      "name": "getSkillReferences",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "imageUri",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_phoneNumber",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_email",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_location",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IJoRocca.ContactInfo",
+          "name": "_contactInfo",
+          "type": "tuple"
+        },
+        {
+          "internalType": "string",
+          "name": "_tokenName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_tokenSymbol",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_profileDescription",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_imageURI",
+          "type": "string"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "name": "occupationByYear",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_employerName",
+          "type": "string"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_startYear",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "_endYear",
+          "type": "uint64"
+        },
+        {
+          "internalType": "string",
+          "name": "_jobTitle",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_roleSummary",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeSocialMedia",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_newImageUri",
+          "type": "string"
+        }
+      ],
+      "name": "resetImageUri",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "skillDetails",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_skillName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_skillDescription",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_numberOfEndorsements",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "skills",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_skillName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_skillDescription",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_numberOfEndorsements",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "socialMedia",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_platform",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_linkOrUsername",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_phoneNumber",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_email",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_location",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IJoRocca.ContactInfo",
+          "name": "_newContactDetails",
+          "type": "tuple"
+        }
+      ],
+      "name": "updateContactDetails",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_newDescription",
+          "type": "string"
+        }
+      ],
+      "name": "updateDescription",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "numDeployments": 1
+}

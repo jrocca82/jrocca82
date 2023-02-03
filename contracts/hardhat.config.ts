@@ -16,6 +16,8 @@ import { HardhatUserConfig } from "hardhat/types";
 import "@nomicfoundation/hardhat-network-helpers";
 import "./tasks/upgradeContract";
 import "./tasks/verifyOnEtherscan";
+import dotenv from "dotenv";
+dotenv.config();
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -39,6 +41,7 @@ const config: HardhatUserConfig = {
     },
     goerli: {
       url: `https://eth-goerli.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
+      accounts: [process.env.PRIVATE_KEY as string],
       saveDeployments: true,
     },
     localhost: {

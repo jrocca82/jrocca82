@@ -12,7 +12,6 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
         _location: "Fortitude Valley, QLD"
     }
 
-
     const tokenFactory = await ethers.getContractFactory(
         "JoRocca"
     );
@@ -22,7 +21,7 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
         "Jo Rocca's Resume",
         "JOROCCA",
         "Professional blockchain developer",
-        "image.com",
+        "https://bafkreidzd6kmexbh2lvrl5iszb3nlogvr7bvzc4sgd6arfjgswbflbtsvy.ipfs.nftstorage.link/",
     ]);
 
     // Save the deployment to hardhat so that the contract can be fetched via ethers.getContract, upgradeable contracts don't do this by default
