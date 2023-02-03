@@ -10,6 +10,35 @@
 <img src="https://github.com/jrocca82/git-profile/blob/master/generated/languages.svg" />
 </p>
 
+## Interact with me on-chain! 
+These dApps are deployed on testnets only, so you can interact with me for free and get a feel for my skills and what I can build!
+
+If you have any issues with the app, please open an issue in the relevant repo.
+
+### Send me a GIF on Solana:
+Network: Solana Testnet
+Link: https://solana-gif-app.vercel.app/
+Repo: https://github.com/jrocca82/solana-gif-app
+
+### Buy me a coffee and say hi on Ethereum:
+Network: Goerli
+Link: https://buy-coffee-app.vercel.app/
+Repo: https://github.com/jrocca82/buy-coffee-app
+
+### Join my DAO on Polygon
+Network: Mumbai
+Link: **COMING SOON**
+Repo: https://github.com/jrocca82/javascript-dao
+
+### Play a game with my NFTs (Be sure to check out the marketplace, too!):
+Network: Goerli-- switching to Arbitrum soon!
+Link: https://jrocca82.github.io/jelly-web3/
+Repo: https://github.com/jrocca82/jelly-game-full
+
+### View my experience through a Soulbound Token on OpenSea
+Link: **COMING SOON**
+Repo: This one!
+
 ## Contributions:
 
 ![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
