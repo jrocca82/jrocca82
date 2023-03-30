@@ -24,6 +24,9 @@ jobs:
     
     # Checks repo under $GITHUB_WORKSHOP, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       
     # Generates the snake  
       - uses: Platane/snk@master
@@ -39,7 +42,7 @@ jobs:
           
       # Push the changes
       - name: Push changes
-        uses: ad-m/github-push-action@main
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
