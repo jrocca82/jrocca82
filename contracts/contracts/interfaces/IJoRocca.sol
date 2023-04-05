@@ -9,14 +9,11 @@ interface IJoRocca is IERC165 {
         uint64 _startYear;
         uint64 _endYear;
         string _jobTitle;
-        string _roleSummary;
     }
 
     struct Education {
         string _universityName;
         string _degreeAwarded;
-        uint64 _startYear;
-        uint64 _endYear;
     }
 
     struct ContactInfo {
@@ -32,7 +29,6 @@ interface IJoRocca is IERC165 {
 
     struct Skill {
         string _skillName;
-        string _skillDescription;
         uint256 _numberOfEndorsements;
         address[] _references;
     }
@@ -72,8 +68,7 @@ interface IJoRocca is IERC165 {
 
     /// @dev Adds a new skill (only contract owner)
     /// @param _skillName the name of the skill
-    /// @param _skillDescription a description of the skill
-    function addSkill(string memory _skillName, string memory _skillDescription) external;
+    function addSkill(string memory _skillName) external;
 
     /// @dev Endorse a skill
     /// @param _skillName the skill to endorse. This skill must already have been added by the addSkill function

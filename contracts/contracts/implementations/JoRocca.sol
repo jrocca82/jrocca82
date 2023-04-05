@@ -27,16 +27,12 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
 
     // Employment
     Employment[] public employmentHistory;
-    // Maps start year to employment record
-    mapping(uint64 => Employment) public occupationByYear;
 
     // Educational History
     Education[] public educationHistory;
-    mapping(uint64 => Education) public educationByYear;
 
     // Skills
     Skill[] public skills;
-    mapping(string => Skill) public skillDetails;
 
     function initialize(
         ContactInfo memory _contactInfo,
@@ -70,22 +66,12 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
         Employment memory _newEmploymentRecord
     ) public override onlyOwner {
         employmentHistory.push(_newEmploymentRecord);
-        occupationByYear[
-            _newEmploymentRecord._startYear
-        ] = _newEmploymentRecord;
     }
 
     function addEducation(
         Education memory _newEducationRecord
     ) public override onlyOwner {
         educationHistory.push(_newEducationRecord);
-        for (
-            uint64 i = _newEducationRecord._startYear;
-            i < _newEducationRecord._endYear;
-            i++
-        ) {
-            educationByYear[i] = _newEducationRecord;
-        }
     }
 
     function addSocialMedia(
@@ -105,21 +91,16 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     }
 
     function addSkill(
-        string memory _skillName,
-        string memory _skillDescription
+        string memory _skillName
     ) public override onlyOwner {
         skills.push() = Skill({
             _skillName: _skillName,
-            _skillDescription: _skillDescription,
             _numberOfEndorsements: 0,
             _references: new address[](0)
         });
-        skillDetails[_skillName] = skills[skills.length - 1];
     }
 
     function endorseSkill(string memory _skillName) public override {
-        skillDetails[_skillName]._references.push(msg.sender);
-        skillDetails[_skillName]._numberOfEndorsements += 1;
         for (uint256 i = 0; i < skills.length; i++) {
             if (
                 keccak256(abi.encodePacked(skills[i]._skillName)) ==
@@ -129,18 +110,6 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
                 skills[i]._references.push(msg.sender);
             }
         }
-    }
-
-    function getSkillReferences(
-        string memory _skillName
-    ) public view returns (address[] memory) {
-        return skillDetails[_skillName]._references;
-    }
-
-    function getSkillEndorsementCount(
-        string memory _skillName
-    ) public view returns (uint256) {
-        return skillDetails[_skillName]._numberOfEndorsements;
     }
 
     function getAllSkills() public view returns (Skill[] memory) {
@@ -166,6 +135,7 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     function tokenURI(uint256 _tokenId) external view returns (string memory) {
         return
             TokenMetadata.buildTokenURI(
+                educationHistory,
                 skills,
                 _name,
                 imageUri,
