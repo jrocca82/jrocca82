@@ -1,5 +1,5 @@
 {
-  "address": "0xd3b3D2a66f122aa7ce9754113bd5830a96E11FEe",
+  "address": "0xf0DB4b4aFb371f23E9CC8FfDF4E3fE8a11fEf32a",
   "abi": [
     {
       "inputs": [],
@@ -76,16 +76,6 @@
               "internalType": "string",
               "name": "_degreeAwarded",
               "type": "string"
-            },
-            {
-              "internalType": "uint64",
-              "name": "_startYear",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "_endYear",
-              "type": "uint64"
             }
           ],
           "internalType": "struct IJoRocca.Education",
@@ -108,24 +98,19 @@
               "type": "string"
             },
             {
-              "internalType": "uint64",
-              "name": "_startYear",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "_endYear",
-              "type": "uint64"
-            },
-            {
               "internalType": "string",
               "name": "_jobTitle",
               "type": "string"
             },
             {
-              "internalType": "string",
-              "name": "_roleSummary",
-              "type": "string"
+              "internalType": "uint256",
+              "name": "_noOfYears",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "_current",
+              "type": "bool"
             }
           ],
           "internalType": "struct IJoRocca.Employment",
@@ -144,11 +129,6 @@
           "internalType": "string",
           "name": "_skillName",
           "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_skillDescription",
-          "type": "string"
         }
       ],
       "name": "addSkill",
@@ -159,14 +139,21 @@
     {
       "inputs": [
         {
-          "internalType": "string",
-          "name": "_platform",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_linkOrUsername",
-          "type": "string"
+          "components": [
+            {
+              "internalType": "string",
+              "name": "_platform",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "_linkOrUsername",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IJoRocca.SocialMedia",
+          "name": "_socialMedia",
+          "type": "tuple"
         }
       ],
       "name": "addSocialMedia",
@@ -232,40 +219,6 @@
     {
       "inputs": [
         {
-          "internalType": "uint64",
-          "name": "",
-          "type": "uint64"
-        }
-      ],
-      "name": "educationByYear",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "_universityName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_degreeAwarded",
-          "type": "string"
-        },
-        {
-          "internalType": "uint64",
-          "name": "_startYear",
-          "type": "uint64"
-        },
-        {
-          "internalType": "uint64",
-          "name": "_endYear",
-          "type": "uint64"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
           "internalType": "uint256",
           "name": "",
           "type": "uint256"
@@ -282,16 +235,6 @@
           "internalType": "string",
           "name": "_degreeAwarded",
           "type": "string"
-        },
-        {
-          "internalType": "uint64",
-          "name": "_startYear",
-          "type": "uint64"
-        },
-        {
-          "internalType": "uint64",
-          "name": "_endYear",
-          "type": "uint64"
         }
       ],
       "stateMutability": "view",
@@ -313,24 +256,19 @@
           "type": "string"
         },
         {
-          "internalType": "uint64",
-          "name": "_startYear",
-          "type": "uint64"
-        },
-        {
-          "internalType": "uint64",
-          "name": "_endYear",
-          "type": "uint64"
-        },
-        {
           "internalType": "string",
           "name": "_jobTitle",
           "type": "string"
         },
         {
-          "internalType": "string",
-          "name": "_roleSummary",
-          "type": "string"
+          "internalType": "uint256",
+          "name": "_noOfYears",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_current",
+          "type": "bool"
         }
       ],
       "stateMutability": "view",
@@ -358,11 +296,6 @@
             {
               "internalType": "string",
               "name": "_skillName",
-              "type": "string"
-            },
-            {
-              "internalType": "string",
-              "name": "_skillDescription",
               "type": "string"
             },
             {
@@ -443,67 +376,24 @@
               "type": "string"
             },
             {
-              "internalType": "uint64",
-              "name": "_startYear",
-              "type": "uint64"
-            },
-            {
-              "internalType": "uint64",
-              "name": "_endYear",
-              "type": "uint64"
-            },
-            {
               "internalType": "string",
               "name": "_jobTitle",
               "type": "string"
             },
             {
-              "internalType": "string",
-              "name": "_roleSummary",
-              "type": "string"
+              "internalType": "uint256",
+              "name": "_noOfYears",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "_current",
+              "type": "bool"
             }
           ],
           "internalType": "struct IJoRocca.Employment[]",
           "name": "",
           "type": "tuple[]"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_skillName",
-          "type": "string"
-        }
-      ],
-      "name": "getSkillEndorsementCount",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_skillName",
-          "type": "string"
-        }
-      ],
-      "name": "getSkillReferences",
-      "outputs": [
-        {
-          "internalType": "address[]",
-          "name": "",
-          "type": "address[]"
         }
       ],
       "stateMutability": "view",
@@ -586,45 +476,6 @@
       "type": "function"
     },
     {
-      "inputs": [
-        {
-          "internalType": "uint64",
-          "name": "",
-          "type": "uint64"
-        }
-      ],
-      "name": "occupationByYear",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "_employerName",
-          "type": "string"
-        },
-        {
-          "internalType": "uint64",
-          "name": "_startYear",
-          "type": "uint64"
-        },
-        {
-          "internalType": "uint64",
-          "name": "_endYear",
-          "type": "uint64"
-        },
-        {
-          "internalType": "string",
-          "name": "_jobTitle",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_roleSummary",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
       "inputs": [],
       "name": "owner",
       "outputs": [
@@ -692,35 +543,6 @@
     {
       "inputs": [
         {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "name": "skillDetails",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "_skillName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_skillDescription",
-          "type": "string"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_numberOfEndorsements",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
           "internalType": "uint256",
           "name": "",
           "type": "uint256"
@@ -731,11 +553,6 @@
         {
           "internalType": "string",
           "name": "_skillName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_skillDescription",
           "type": "string"
         },
         {
@@ -866,5 +683,5 @@
       "type": "function"
     }
   ],
-  "numDeployments": 1
+  "numDeployments": 2
 }
