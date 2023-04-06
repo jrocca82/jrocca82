@@ -4,18 +4,6 @@ pragma solidity 0.8.17;
 import "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 
 interface IJoRocca is IERC165 {
-    struct Employment {
-        string _employerName;
-        uint64 _startYear;
-        uint64 _endYear;
-        string _jobTitle;
-    }
-
-    struct Education {
-        string _universityName;
-        string _degreeAwarded;
-    }
-
     struct ContactInfo {
         string _phoneNumber;
         string _email;
@@ -25,6 +13,18 @@ interface IJoRocca is IERC165 {
     struct SocialMedia {
         string _platform;
         string _linkOrUsername;
+    }
+
+    struct Education {
+        string _universityName;
+        string _degreeAwarded;
+    }
+
+    struct Employment {
+        string _employerName;
+        string _jobTitle;
+        uint256 _noOfYears;
+        bool _current;
     }
 
     struct Skill {
@@ -47,12 +47,8 @@ interface IJoRocca is IERC165 {
 
     //###### FUNCTIONS ######
     /// @dev Adds a new social media record (only contract owner)
-    /// @param _platform the social media platform name
-    /// @param _linkOrUsername A link to the owner's social media or their platform username
-    function addSocialMedia(
-        string memory _platform,
-        string memory _linkOrUsername
-    ) external;
+    /// @param _socialMedia the social media struct
+    function addSocialMedia(SocialMedia memory _socialMedia) external;
 
     /// @dev Removes a social media record (only contract owner)
     /// @param _id The social media record id to remove
@@ -85,5 +81,8 @@ interface IJoRocca is IERC165 {
 
     function ownerOf(uint256 tokenId) external view returns (address);
 
-    function getContactDetails() external view returns(ContactInfo calldata, SocialMedia[] calldata);
+    function getContactDetails()
+        external
+        view
+        returns (ContactInfo calldata, SocialMedia[] calldata);
 }

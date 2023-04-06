@@ -2,19 +2,19 @@
   "manifestVersion": "3.2",
   "admin": {
     "address": "0x02b0B4EFd909240FCB2Eb5FAe060dC60D112E3a4",
-    "txHash": "0x56c513b75adb9e3852f7d2c01fd97d73dcfb9d0f3d9863058169b0392a26c27f"
+    "txHash": "0xc55e13a22d99aad7cf365128393dd8462e5e7d6fb0abadfc3d0d346fe687073b"
   },
   "proxies": [
     {
       "address": "0x638A246F0Ec8883eF68280293FFE8Cfbabe61B44",
-      "txHash": "0x7f0cedd699d5c3222fa97fe3754fc887a0b8d9345e74ed083dd37cc30c0818e6",
+      "txHash": "0x61c950526d1733841d5b38b89a1c3349255b39ba2a7edc046ae3955a4ea5c48e",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "01794dba87703a82f58b8020769268a5222295865880c8fa4cf1d9c1c463fc0d": {
+    "6aa4f6e46cefb2c2cbceb660d7ada7cc115e7706c6d359537f42f763d2f0bb93": {
       "address": "0x01c1DeF3b91672704716159C9041Aeca392DdFfb",
-      "txHash": "0xf432903a63082fd98729383f7d5706c0046943f87efbe83a7e88b27c4a3fdfbe",
+      "txHash": "0x61857ff8cc91e797da49369fb7d7b75e355ff287d4532d1cd7cc8fd385c0325d",
       "layout": {
         "solcVersion": "0.8.17",
         "storage": [
@@ -65,7 +65,7 @@
             "slot": "101",
             "type": "t_string_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:14"
+            "src": "contracts/implementations/JoRocca.sol:18"
           },
           {
             "label": "_symbol",
@@ -73,7 +73,7 @@
             "slot": "102",
             "type": "t_string_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:15"
+            "src": "contracts/implementations/JoRocca.sol:19"
           },
           {
             "label": "_owners",
@@ -81,7 +81,7 @@
             "slot": "103",
             "type": "t_mapping(t_uint256,t_address)",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:17"
+            "src": "contracts/implementations/JoRocca.sol:21"
           },
           {
             "label": "_tokenCounter",
@@ -89,7 +89,7 @@
             "slot": "104",
             "type": "t_struct(Counter)679_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:18"
+            "src": "contracts/implementations/JoRocca.sol:22"
           },
           {
             "label": "_balances",
@@ -97,7 +97,7 @@
             "slot": "105",
             "type": "t_mapping(t_address,t_uint256)",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:20"
+            "src": "contracts/implementations/JoRocca.sol:24"
           },
           {
             "label": "imageUri",
@@ -105,7 +105,7 @@
             "slot": "106",
             "type": "t_string_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:21"
+            "src": "contracts/implementations/JoRocca.sol:25"
           },
           {
             "label": "description",
@@ -113,47 +113,47 @@
             "slot": "107",
             "type": "t_string_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:24"
+            "src": "contracts/implementations/JoRocca.sol:28"
           },
           {
             "label": "contactDetails",
             "offset": 0,
             "slot": "108",
-            "type": "t_struct(ContactInfo)2643_storage",
+            "type": "t_struct(ContactInfo)3952_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:25"
+            "src": "contracts/implementations/JoRocca.sol:29"
           },
           {
             "label": "socialMedia",
             "offset": 0,
             "slot": "111",
-            "type": "t_array(t_struct(SocialMedia)2648_storage)dyn_storage",
+            "type": "t_array(t_struct(SocialMedia)3957_storage)dyn_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:26"
+            "src": "contracts/implementations/JoRocca.sol:30"
           },
           {
             "label": "employmentHistory",
             "offset": 0,
             "slot": "112",
-            "type": "t_array(t_struct(Employment)2631_storage)dyn_storage",
+            "type": "t_array(t_struct(Employment)3971_storage)dyn_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:29"
+            "src": "contracts/implementations/JoRocca.sol:33"
           },
           {
             "label": "educationHistory",
             "offset": 0,
             "slot": "113",
-            "type": "t_array(t_struct(Education)2636_storage)dyn_storage",
+            "type": "t_array(t_struct(Education)3962_storage)dyn_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:32"
+            "src": "contracts/implementations/JoRocca.sol:36"
           },
           {
             "label": "skills",
             "offset": 0,
             "slot": "114",
-            "type": "t_array(t_struct(Skill)2656_storage)dyn_storage",
+            "type": "t_array(t_struct(Skill)3979_storage)dyn_storage",
             "contract": "JoRocca",
-            "src": "contracts/implementations/JoRocca.sol:35"
+            "src": "contracts/implementations/JoRocca.sol:39"
           }
         ],
         "types": {
@@ -165,19 +165,19 @@
             "label": "address[]",
             "numberOfBytes": "32"
           },
-          "t_array(t_struct(Education)2636_storage)dyn_storage": {
+          "t_array(t_struct(Education)3962_storage)dyn_storage": {
             "label": "struct IJoRocca.Education[]",
             "numberOfBytes": "32"
           },
-          "t_array(t_struct(Employment)2631_storage)dyn_storage": {
+          "t_array(t_struct(Employment)3971_storage)dyn_storage": {
             "label": "struct IJoRocca.Employment[]",
             "numberOfBytes": "32"
           },
-          "t_array(t_struct(Skill)2656_storage)dyn_storage": {
+          "t_array(t_struct(Skill)3979_storage)dyn_storage": {
             "label": "struct IJoRocca.Skill[]",
             "numberOfBytes": "32"
           },
-          "t_array(t_struct(SocialMedia)2648_storage)dyn_storage": {
+          "t_array(t_struct(SocialMedia)3957_storage)dyn_storage": {
             "label": "struct IJoRocca.SocialMedia[]",
             "numberOfBytes": "32"
           },
@@ -205,7 +205,7 @@
             "label": "string",
             "numberOfBytes": "32"
           },
-          "t_struct(ContactInfo)2643_storage": {
+          "t_struct(ContactInfo)3952_storage": {
             "label": "struct IJoRocca.ContactInfo",
             "members": [
               {
@@ -241,7 +241,7 @@
             ],
             "numberOfBytes": "32"
           },
-          "t_struct(Education)2636_storage": {
+          "t_struct(Education)3962_storage": {
             "label": "struct IJoRocca.Education",
             "members": [
               {
@@ -259,7 +259,7 @@
             ],
             "numberOfBytes": "64"
           },
-          "t_struct(Employment)2631_storage": {
+          "t_struct(Employment)3971_storage": {
             "label": "struct IJoRocca.Employment",
             "members": [
               {
@@ -269,27 +269,27 @@
                 "slot": "0"
               },
               {
-                "label": "_startYear",
-                "type": "t_uint64",
-                "offset": 0,
-                "slot": "1"
-              },
-              {
-                "label": "_endYear",
-                "type": "t_uint64",
-                "offset": 8,
-                "slot": "1"
-              },
-              {
                 "label": "_jobTitle",
                 "type": "t_string_storage",
                 "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "_noOfYears",
+                "type": "t_uint256",
+                "offset": 0,
                 "slot": "2"
+              },
+              {
+                "label": "_current",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
               }
             ],
-            "numberOfBytes": "96"
+            "numberOfBytes": "128"
           },
-          "t_struct(Skill)2656_storage": {
+          "t_struct(Skill)3979_storage": {
             "label": "struct IJoRocca.Skill",
             "members": [
               {
@@ -313,7 +313,7 @@
             ],
             "numberOfBytes": "96"
           },
-          "t_struct(SocialMedia)2648_storage": {
+          "t_struct(SocialMedia)3957_storage": {
             "label": "struct IJoRocca.SocialMedia",
             "members": [
               {
@@ -334,10 +334,6 @@
           "t_uint256": {
             "label": "uint256",
             "numberOfBytes": "32"
-          },
-          "t_uint64": {
-            "label": "uint64",
-            "numberOfBytes": "8"
           },
           "t_uint8": {
             "label": "uint8",

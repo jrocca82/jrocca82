@@ -75,13 +75,9 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     }
 
     function addSocialMedia(
-        string memory _platform,
-        string memory _linkOrUsername
+        SocialMedia memory _socialMedia
     ) public override onlyOwner {
-        socialMedia.push() = SocialMedia({
-            _platform: _platform,
-            _linkOrUsername: _linkOrUsername
-        });
+        socialMedia.push(_socialMedia);
     }
 
     function removeSocialMedia(uint256 _index) public override onlyOwner {
@@ -135,7 +131,10 @@ contract JoRocca is IJoRocca, Initializable, OwnableUpgradeable {
     function tokenURI(uint256 _tokenId) external view returns (string memory) {
         return
             TokenMetadata.buildTokenURI(
+                contactDetails,
+                socialMedia,
                 educationHistory,
+                employmentHistory,
                 skills,
                 _name,
                 imageUri,
