@@ -13,7 +13,7 @@
 <!-- https://github.com/abhisheknaiidu/awesome-github-profile-readme#github-actions- -->
 
 <!-- https://github.com/kyechan99/capsule-render -->
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:FF4F9A,100:FFD93D&height=250&section=header&text=Emerging%20Tech%20Sofware%20Developer&fontSize=40)
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:FF4F9A,100:FFCC33&height=250&section=header&text=Emerging%20Tech%20Sofware%20Developer&fontSize=40)
 
 
 ## Areas of Focus
