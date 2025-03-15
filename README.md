@@ -19,7 +19,7 @@ Blockchain
 
 ## Github Contributions:
 
-[snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)
 
 ## Github Stats:
 <p alignItems="center" justifyContent="space-between">
