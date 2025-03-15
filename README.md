@@ -13,7 +13,7 @@
 <!-- https://github.com/abhisheknaiidu/awesome-github-profile-readme#github-actions- -->
 
 <!-- https://github.com/kyechan99/capsule-render -->
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:FF4F9A,100:FFCC33&height=250&section=header&text=Emerging%20Tech%20Sofware%20Developer&fontSize=40)
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:FF4F9A,100:FFCC33&height=250&section=header&text=Sofware%20Developer%20in%20Emerging%20Tech&fontSize=40)
 <!--## Github Contributions:
 ![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)-->
 
