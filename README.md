@@ -38,4 +38,4 @@ Blockchain
 <img src="https://github.com/jrocca82/git-profile/blob/master/generated/languages.svg" />
 </p>
 
-![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=0:FFB7C5,100:FFD93D)
+![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=0:FF4F9A,100:FFCC33)
