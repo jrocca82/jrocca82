@@ -3,12 +3,12 @@
 <!-- https://github.com/abhisheknaiidu/awesome-github-profile-readme#github-actions- -->
 
 <!-- https://github.com/kyechan99/capsule-render -->
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:<!-- https://github.com/jstrieb/github-stats -->
+<!-- https://github.com/jstrieb/github-stats -->
 <!-- https://github.com/gleich/profile_stack -->
 <!-- https://github.com/abhisheknaiidu/awesome-github-profile-readme#github-actions- -->
 
 <!-- https://github.com/kyechan99/capsule-render -->
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:<!-- https://github.com/jstrieb/github-stats -->
+<!-- https://github.com/jstrieb/github-stats -->
 <!-- https://github.com/gleich/profile_stack -->
 <!-- https://github.com/abhisheknaiidu/awesome-github-profile-readme#github-actions- -->
 
