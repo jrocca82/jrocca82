@@ -17,7 +17,7 @@
 <!--## Github Contributions:
 ![snake gif](https://github.com/jrocca82/jrocca82/blob/output/github-contribution-grid-snake.svg)-->
 
-## Github Stats:
+## 🏆 Github Stats:
 
 <div align="center">
 <img src="https://github.com/jrocca82/git-profile/blob/master/generated/overview.svg" />
