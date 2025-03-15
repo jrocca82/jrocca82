@@ -3,7 +3,7 @@
 <!-- https://github.com/abhisheknaiidu/awesome-github-profile-readme#github-actions- -->
 
 <!-- https://github.com/kyechan99/capsule-render -->
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:6d98fa,100:f9f79a&height=250&section=header&text=Jo%20Rocca:%20emerging%20tech%20sofware%20developer&fontSize=40)
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:6d98fa,100:f9f79a&height=250&section=header&text=Emerging%20Tech%20Sofware%20Developer&fontSize=40)
 
 <!-- ## Github Contributions:
 
