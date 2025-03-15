@@ -26,6 +26,7 @@
 
 ## 🔥 Areas of Focus
 
+<div align="center">
 <table>
   <tr>
     <td align="center" valign="top"><strong>🤖 AI</strong></td>
@@ -45,5 +46,6 @@
     </td>
   </tr>
 </table>
+</div>
 
 ![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=0:FF4F9A,100:FFCC33)
